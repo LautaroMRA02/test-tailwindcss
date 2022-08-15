@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>flex</title>
+</head>
+<body >
+    <a href="../index.html" class="fixed left-0 top-0 w-20 h-20 bg-black text-white m-10 rounded-full flex justify-center items-center"><p> back</p></a>       
+    <main class="w-screen h-screen overflow-scroll snap snap-y snap-mandatory ">
+        <div class="tt w-full h-screen snap-always snap-start   flex flex-col gap-4 justify-between p-10 ">
+            <section class="animate item1 flex flex-row gap-8">
+                <article class="bg-black w-20 h-20">#</article>
+                <article class="bg-black w-20 h-20">#</article>
+                <article class="bg-black w-20 h-20">#</article>
+            </section>
+            <section class="animate item2 flex flex-row gap-8 ">
+                <article class=" bg-black w-20 h-20">#</article>
+                <article class=" bg-black w-20 h-20 ">#</article>
+                <article class=" bg-black w-20 h-20">#</article>
+            </section>
+            <section class="animate  item3 flex flex-row gap-8 ">
+                <article class=" bg-black w-20 h-20" >#</article>
+                <article class=" bg-black w-20 h-20">#</article>
+                <article class=" bg-black w-20 h-20 ">#</article>
+            </section>
+            <section class="animate  item2 flex flex-row gap-8 ">
+                <article class=" bg-black w-20 h-20" >#</article>
+                <article class=" bg-black w-20 h-20">#</article>
+                <article class=" bg-black w-20 h-20 ">#</article>
+            </section>
+            <section class="animate  item1 flex flex-row gap-8 ">
+                <article class=" bg-black w-20 h-20" >#</article>
+                <article class=" bg-black w-20 h-20">#</article>
+                <article class=" bg-black w-20 h-20 ">#</article>
+            </section>
+            <section class="animate  item2 flex flex-row gap-8 ">
+                <article class=" bg-black w-20 h-20" >#</article>
+                <article class=" bg-black w-20 h-20">#</article>
+                <article class=" bg-black w-20 h-20 ">#</article>
+            </section>
+            <section class="animate  item3 flex flex-row gap-8 ">
+                <article class=" bg-black w-20 h-20" >#</article>
+                <article class=" bg-black w-20 h-20">#</article>
+                <article class=" bg-black w-20 h-20 ">#</article>
+            </section>
+        </div>
+        <div class="w-full h-screen snap-always snap-start bg-amber-200 flex flex-col p-10 justify-center  animatio_gap">
+            <div class=" w-full h-[10rem] bg-white rounded"></div>
+            <div class=" w-full h-[10rem] bg-white rounded"></div>
+            <div class=" w-full h-[10rem] bg-white rounded"></div>
+        </div>
+        <div class="w-full h-screen snap-always snap-start">1</div>
+    </main>
+    <style>
+        :root .item1 {
+            --v1: 50%;
+            --v2: 200%;
+            --v3: 50%;
+            --v4: -100%;
+        }
+        :root .item2 {
+            top: 50%;
+            --v1: 200%;
+            --v2: 50%;
+            --v3: -100%;
+            --v4: 50%;
+        }
+        :root .item3{
+            top:  200%;
+            --v1: 50%;
+            --v2: -100%;
+            --v3: 50%;
+            --v4: 200%;
+        }
+        .tt{
+            overflow-x: hidden;
+        } 
+
+        .animate {
+            animation: chage-position 10s ease-in-out infinite;
+        }
+        @keyframes chage-position {
+            0%{
+                transform: translateX(var(--v1));
+            }
+            25%{
+                transform: translateX(var(--v2));
+            }
+            50%{
+                transform: translateX(var(--v3));
+            }
+            75%{
+                transform: translateX(var(--v4));
+            }
+            100%{
+                transform: translateX(var(--v1));
+            }
+        }
+        .animatio_gap{
+            animation: gap-gap 1s ease-in-out infinite;
+        }
+
+        @keyframes gap-gap {
+            0%{ gap:40% }
+            40%{ gap:4px }
+            50%{ gap:20px }
+            60%{ gap:4px }
+            70%{ gap:20px }
+            100%{ gap:40% }
+        }
+    </style>
+</body>
+</html>
