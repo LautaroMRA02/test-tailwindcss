@@ -1,47 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>layout</title>
+    <title>flex</title>
 </head>
-<body class="bg-red-300 ">
+<body>
     <a href="../index.html" class="fixed left-0 top-0 w-20 h-20 bg-black text-white m-10 rounded-full flex justify-center items-center"><p> back</p></a>       
-
-    <div class="w-screen h-screen overflow-scroll bg-white dark:bg-black snap snap-y snap-mandatory">
-            <div class="bg-amber-200 w-full h-screen snap-always snap-start grid grid-cols-4 gap-4 hover:grid-cols-6  p-10 ">
-                <div class=" bg-black rounded"></div>
-                <div class=" bg-black rounded"></div>
-                <div class=" bg-black rounded"></div>
-                <div class=" bg-black rounded"></div>
-                <div class=" bg-black rounded"></div>
-                <div class=" bg-black rounded"></div>
-            </div>
-            <div class="bg-white w-full h-screen snap-always snap-start">
-                <div class="grid grid-cols-12 grid-rows-[100px_1fr]  gap-4 p-10 h-full text-white">
-                    <div class="bg-black rounded col-span-12 text-center cursor-pointer flex justify-end items-center">
-                        <div class="bg-amber-200 w-20 h-20 text-[3rem] select-none" id="menu">|||</div>
-                    </div>
-                    <div class="bg-black rounded col-span-4" id="aside">2</div>
-                    <div class="bg-black rounded col-span-8" id="content">3</div>
-                  </div>
-            </div>
-            <div class="bg-amber-200 w-screen h-screen snap-always snap-start">1</div>
-            <div class="bg-white    w-screen h-screen snap-always snap-start">2</div>
-    </div>
-    <script>
-        document.getElementById('menu').addEventListener('click',function(){
-            const aside = document.getElementById('aside');
-            const content = document.getElementById('content');
-            aside.classList.toggle('hidden')
-            if(aside.classList.contains('hidden')){
-                content.classList.replace('col-span-8','col-span-12')
-            } else {
-                content.classList.replace('col-span-12','col-span-8')
-            }
-        })
-    </script>
+    
 </body>
 </html>
